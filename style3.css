@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+#mario img {
+    width: 10vw;
+    height: 15vw;
+    position: absolute;
+    bottom: 0vh;
+    right: 20vw;
+}
+
+@media screen and (max-width:720px) {
+    #mario img {
+        width: 30vw;
+        height: 40vw;
+        right: 10vw;
+    }
+}
+
+#images {
+    /* display: inline; */
+    position: relative;
+    top: 40vh;
+    left: 40vw;
+    width: 10vh;
+}
+
+.coin {
+    width: 7vh;
+    /* position: relative;
+    left: 9vh;
+    bottom: 3em; */
+    animation: myCoin 0.6s linear 0s infinite normal;
+}
+
+.box {
+    width: 10vh;
+}
+
+.boxAnim {
+    animation: myBox .45s linear 0s infinite alternate;
+
+}
+
+@keyframes myBox {
+    0% {
+        margin-top: 0px;
+    }
+
+    50% {
+        margin-top: 8px;
+    }
+
+    100% {
+        margin-top: 0px;
+
+    }
+}
+
+@keyframes myCoin {
+    0% {
+        opacity: 1;
+        transform: translateY(0px) rotatey(0deg);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-20vh) rotatey(180deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(0px) rotatey(0deg);
+
+    }
+}

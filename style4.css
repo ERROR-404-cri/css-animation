@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: teal;
+}
+
+#container {
+    position: relative;
+    top: 100px;
+    width: 60%;
+    margin: 0 auto;
+    animation: container 5s linear;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+
+#first {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    animation: first 1s linear 0s;
+    line-height: 25px;
+    margin-bottom: 10px;
+
+}
+
+@keyframes first {
+    0% {
+        transform: translatey(-100px);
+    }
+
+    50% {
+        transform: translatey(-50px);
+    }
+
+    100% {
+        transform: translatey(0);
+    }
+}
+
+#second {
+    position: relative;
+    top: 150px;
+    text-align: center;
+    animation: second 1s linear;
+    line-height: 25px;
+    width: 70%;
+    margin: 0 auto;
+    /* max-height: 30vh; */
+    /* box-sizing: border-box; */
+    /* float: left; */
+}
+
+@keyframes second {
+    0% {
+        opacity: 0;
+        transform: translatex(-400px);
+
+    }
+
+    50% {
+        transform: translatex(-200px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatex(0px);
+
+    }
+}
+
+button {
+    position: relative;
+    top: 220px;
+    display: block;
+    margin: 10px auto;
+    animation: btn 1.5s linear 1.5s;
+    transition: all 0.5s linear;
+    padding: 10px;
+    border: none;
+    background-color: thistle;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+button:hover {
+    transform: rotatey(180deg);
+}
+
+@keyframes btn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

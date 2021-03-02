@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: hotpink;
+    position: relative;
+    /*animation-name: myBox;/any name for @keyframe/
+     animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 4;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    animation-play-state: running;/by default,no need to include/
+     */
+    /*shorthand :same order as above*/
+    animation: myBox 5s linear 1s infinite alternate backwards running;
+    /*we can ommit running bcz it is by default, we can also omit others like: delaytime,fill-mode*/
+
+}
+
+/*@keyframes myBox {
+    from { /start of anim/
+        background-color: hotpink;
+    }
+
+    to { /end of anim/
+        background-color: green;
+    }
+}*/
+
+@keyframes myBox {
+    0% {
+        /*start of anim*/
+        background-color: teal;
+        left: 0;
+        top: 0;
+    }
+
+    25% {
+        background-color: goldenrod;
+        left: 500px;
+        top: 0;
+        border-radius: 50%;
+    }
+
+    50% {
+        background-color: royalblue;
+        left: 500px;
+        top: 400px;
+        border-radius: 0;
+    }
+
+    75% {
+        background-color: maroon;
+        left: 0;
+        top: 400px;
+        border-radius: 25%;
+    }
+
+    100% {
+        /*end of anim*/
+        background-color: green;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+    }
+}
